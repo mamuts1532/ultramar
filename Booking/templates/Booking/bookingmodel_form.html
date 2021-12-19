@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <div class="container">
+
+
+
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">PRESENTACIÓN</h2>
+            <p class="blog-post-meta">{% now "j F Y g:i a" %}</p>
+
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Save">
+            </form>
+            
+
+
+          </div><!-- /.blog-post -->
+
+
+      </div><!-- /.row -->
+    </div>
+
+
+{% endblock %}

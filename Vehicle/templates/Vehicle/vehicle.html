@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class = "container">
+        <div class="row">
+            <h1>This pages is to Vehicle</h1>
+            <h1>This pages is to Vehicle</h1>
+
+        </div>
+
+        {% if object_list %}
+        {% for vehicle in vehicleview.all %}
+            <li> VIN: {{ vehicle.vin }} - Make: {{ vehicle.make }} - Model: {{ vehicle.modelo }} - Weight: {{ vehicle.weight }}</li>
+            <hr/>
+            {% empty %}
+            <li>No articles yet.</li>
+        {% endfor %}
+    {% endif %}
+    </div>
+
+
+{% endblock  %}

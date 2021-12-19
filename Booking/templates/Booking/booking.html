@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class = "container">
+        <div class="row">
+            <h1>This pages is to Booking</h1>
+            <h1>This pages is to Booking</h1>
+
+        </div>
+
+        {% if object_list %}
+        {% for book in bookingview.all %}
+            <li> Booking number: {{ book.booking_number }} - Loading port: {{ book.loading_port }} - Discharge port: {{ book.discharge_port }} - Ship arrival date: {{ book.ship_arrival_date|date }} - Ship departure date: {{ book.ship_departure_date|date }}</li>
+            <hr/>
+            {% empty %}
+            <li>No articles yet.</li>
+        {% endfor %}
+    {% endif %}
+    </div>
+
+
+{% endblock  %}
